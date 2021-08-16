@@ -1,7 +1,7 @@
 {
   "name": "aula",
   "version": "1.0.0",
-  "description": "",
+  "description": "- Exemplo de projeto: [https://github.com/ifpi-picos/orientacao-objetos-typescript](https://github.com/ifpi-picos/orientacao-objetos-typescript)",
   "main": "index.js",
   "scripts": {
     "test": "jest"
@@ -13,5 +13,14 @@
     "jest": "^27.0.6",
     "ts-jest": "^27.0.4",
     "typescript": "^4.3.5"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ifpi-picos/orientacao-a-objetos-com-typescript-AckermanFernando.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/ifpi-picos/orientacao-a-objetos-com-typescript-AckermanFernando/issues"
+  },
+  "homepage": "https://github.com/ifpi-picos/orientacao-a-objetos-com-typescript-AckermanFernando#readme"
 }

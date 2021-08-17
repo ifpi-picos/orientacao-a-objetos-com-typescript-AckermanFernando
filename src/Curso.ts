@@ -28,9 +28,11 @@ export class Curso {
     removeDisciplinas(disciplina: Disciplina){
         let index = this.disciplinas.indexOf(disciplina)
         if(index > -1){
-            this.disciplinas.slice(index, 1)
+            this.disciplinas.splice(index, 1)
+            return this.disciplinas
         }else{
             return console.log("Não encontrado")
         }
     }
+
 }

@@ -2,10 +2,10 @@ import { Professor } from "./Professor"
 
 export class Disciplina{
     private nome : string
-    private ch : int
+    private ch : number
     private professor: Professor
 
-    constructor(nome: string, ch: int, professor: Professor){
+    constructor(nome: string, ch: number, professor: Professor){
         this.nome = nome
         this.ch = ch
         this.professor = professor
@@ -15,6 +15,9 @@ export class Disciplina{
         return this.nome 
     }
 
+    getProfessor(){
+        return this.professor
+    }
     // getCh(){
     //     return this.ch
     // }

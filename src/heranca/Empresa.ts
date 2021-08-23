@@ -4,13 +4,13 @@ export class Empresa{
     private nome: string
     private funcionarios: Funcionario[]
 
-    static empresa(nome: string){
-        this.nome = nome
-    }
+    // Empresa(nome: string){
+    //     this.nome = nome
+    // }
 
-    static empresa(nome: string, funcionarios: Funcionario[]){
+    Empresa(nome: string, funcionarios: Funcionario[]){
         this.nome = nome
-        this.funcionarios = funcionarios
+        if(funcionarios){this.funcionarios = funcionarios}
     }
 
     public getNome(): string{

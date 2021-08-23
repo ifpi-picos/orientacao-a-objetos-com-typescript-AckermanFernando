@@ -4,8 +4,9 @@
   "description": "- Exemplo de projeto: [https://github.com/ifpi-picos/orientacao-objetos-typescript](https://github.com/ifpi-picos/orientacao-objetos-typescript)",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "reloadtest": "tsc src/app.ts & jest"
+    "testall": "jest",
+    "tsch": "tsc src/heranca/**.ts",
+    "tsca": "tsc src/agregacao/**.ts"
   },
   "author": "",
   "license": "ISC",

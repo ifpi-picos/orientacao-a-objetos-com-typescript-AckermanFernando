@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const Curso_1 = require("./Curso");
+const Disciplina_1 = require("./Disciplina");
+const Professor_1 = require("./Professor");
+const Jesiel = new Professor_1.Professor('Jesiel');
+const Aislan = new Professor_1.Professor('Aislan');
+const web = new Disciplina_1.Disciplina('Programação para Web', 50, Jesiel);
+const es = new Disciplina_1.Disciplina('Engenharia de Software I', 70, Aislan);
+const ads = new Curso_1.Curso('ADS');
+ads.adicionaDisciplinas(web);
+ads.adicionaDisciplinas(es);
+console.log('Curso: ', ads.getNome());
+console.log('Disciplinas', ads.getDisciplinas());

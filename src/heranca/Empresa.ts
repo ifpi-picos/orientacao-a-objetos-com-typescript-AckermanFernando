@@ -8,7 +8,7 @@ export class Empresa{
     //     this.nome = nome
     // }
 
-    Empresa(nome: string, funcionarios: Funcionario[]){
+    constructor(nome: string, ...funcionarios: Funcionario[]){
         this.nome = nome
         if(funcionarios){this.funcionarios = funcionarios}
     }
@@ -18,7 +18,7 @@ export class Empresa{
     }
 
     public addFuncionario(funcionario: Funcionario): void{
-        this.funcionarios.push(funcionario)
+        this.funcionarios.unshift(funcionario)
     }
 
     public getFuncionarios(): Funcionario[]{

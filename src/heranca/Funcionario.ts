@@ -3,10 +3,13 @@ export abstract class Funcionario{
     private salario: number
     private beneficios: string[]
 
-    constructor(nome: string, salario: number, benefecios: string[]){
+    constructor(nome: string, salario: number, ...beneficios: string[]){
         this.nome = nome
         this.salario = salario
-        this.beneficios = benefecios
+        if(beneficios){
+           this.beneficios = beneficios  
+        }
+       
     }
 
     public getNome(): string{
@@ -27,12 +30,16 @@ export abstract class Funcionario{
         this.salario = salario
     }
 
-    public getBeneficios(beneficios: string[]): string[]{
-        return beneficios
+    public getBeneficios(): string[]{
+        return this.beneficios
     }
 
-    public setBeneficios(beneficio: string): void{
+    public setBeneficio(beneficio: string): void{
         this.beneficios.push(beneficio)
+    }
+
+    public setBeneficios(beneficio: string[]): void{
+        this.beneficios = beneficio
     }
 
     public removeBeneficio(beneficio: string): string{

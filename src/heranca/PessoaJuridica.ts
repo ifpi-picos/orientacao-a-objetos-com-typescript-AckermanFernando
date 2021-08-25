@@ -4,8 +4,11 @@ export class PessoaJuridica extends Funcionario{
     
     private cnpj: string
 
-    constructor(nome: string, salario: number, beneficios: string[], cnpj: string){
-        super(nome, salario, beneficios)
+    constructor(nome: string, salario: number, cnpj: string, ...beneficios: string[]){
+        super(nome, salario)
+        if(beneficios){
+            super.setBeneficios(beneficios)
+        }
         this.cnpj = cnpj
         
     }

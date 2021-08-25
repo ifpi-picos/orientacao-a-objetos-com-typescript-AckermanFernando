@@ -3,8 +3,11 @@ import { Funcionario } from "./Funcionario";
 export class PessoaFisica extends Funcionario{
     private cpf: string
 
-    constructor(nome: string, salario: number, beneficios: string[], cpf: string){
-        super(nome, salario, beneficios)
+    constructor(nome: string, salario: number, cpf: string, ...beneficios: string[]){
+        super(nome, salario)
+        if(beneficios){
+            super.setBeneficios(beneficios)
+        }
         this.cpf = cpf
     }
 

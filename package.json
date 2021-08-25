@@ -4,8 +4,8 @@
   "description": "- Exemplo de projeto: [https://github.com/ifpi-picos/orientacao-objetos-typescript](https://github.com/ifpi-picos/orientacao-objetos-typescript)",
   "main": "index.js",
   "scripts": {
-    "testall": "jest",
-    "tsch": "tsc src/heranca/**.ts",
+    "test": "jest",
+    "tsch": "tsc tests/heranca/**.ts & node dist/heranca/app.js",
     "tsca": "tsc src/agregacao/**.ts"
   },
   "author": "",

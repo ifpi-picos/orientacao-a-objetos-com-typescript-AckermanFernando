@@ -1,6 +1,6 @@
-import { Curso } from "../src/Curso"
-import { Disciplina } from "../src/Disciplina"
-import { Professor } from "../src/Professor"
+import { Curso } from "../../src/agregacao/Curso"
+import { Disciplina } from "../../src/agregacao/Disciplina"
+import { Professor } from "../../src/agregacao/Professor"
 
 describe('Testes curso', () => {
     const NOME_CURSO_ADS = 'ADS'

@@ -1,16 +1,13 @@
+/* globals describe, expect, it */
 import { Empresa } from "./Empresa";
 import { Funcionario } from "./Funcionario";
 import { PessoaFisica } from "./PessoaFisica";
 import { PessoaJuridica } from "./PessoaJuridica";
 
 
-let beneficiosPF: string[]
-beneficiosPF.push("plano de saúde");
-beneficiosPF.push("VR");
-beneficiosPF.push("Férias");
+let beneficiosPF: string
+let benefeciosPJ: string
 
-let benefeciosPJ: string[]
-benefeciosPJ.push('Plano de saúde')
 
 let ifpi: Empresa = new Empresa("IFPI") 
 
@@ -18,16 +15,21 @@ let Fernando: Funcionario
 let BglCorp: Funcionario
 
 try{
-    Fernando = new PessoaFisica("Fernando", 5000, beneficiosPF, "098765423445")
-    BglCorp = new PessoaJuridica("BGL Corp", 5000, benefeciosPJ, "23456787653421")
+    Fernando = new PessoaFisica("Fernando", 5000, "098765423445", beneficiosPF)
+    Fernando.setBeneficio("plano de saúde")
+    Fernando.setBeneficio("VR")
+    Fernando.setBeneficio("Férias")
+    BglCorp = new PessoaJuridica("BGL Corp", 5000, "23456787653421", benefeciosPJ)
+    BglCorp.setBeneficio("Plano de saúde")
     ifpi.addFuncionario(Fernando)
     ifpi.addFuncionario(BglCorp)
 }catch(e){
     console.error(e)
 }
 
-ifpi.getFuncionarios().forEach(value => {
-    console.log("Nome: " + value)
-    console.log("Salário: " + value)
-    console.log("Identificador: " + value)
-});
+console.log(ifpi.getFuncionarios())
+// ifpi.getFuncionarios().forEach(value => {
+//     console.log("Nome: " + ifpi.getFuncionarios()[0].getNome())
+//     console.log("Salário: " + value)
+//     console.log("Identificador: " + value)
+// });
